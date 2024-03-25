@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Machine de fraisage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/w3.css') }}">
+    <link rel="stylesheet" href="./static/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div class="w3-container w3-center" style="margin-top: 25px;">
+        <div class="w3-card-4 w3-blue" style="width: 50%; margin: auto;">
+            <div class="w3-container">
+                <h1 class="w3-center">Default Detection | Milling Machine</h1>
+            </div>
+        </div>
+    </div>
+    <div class="w3-container w3-center" style="margin-top: 25px;">
+        <div class="w3-card-4 w3-light-grey w3-center" style="width:50%; margin: auto;">
+            <div class="w3-container w3-blue">
+                <h2>Enter Information</h2>
+            </div>
+            <br>
+            <form style="padding:0.01em 40px" action="/main" method="post">
+                <div class="input-container">
+                    <label for="Type" class="w3-large w3-italic">Type</label>
+                    <div style="width: 60%; margin-left: auto;" class="w3-right">
+                        <input  class="w3-input w3-light-grey w3-hover-blue" type="number" id="Type" name="Type">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="Air_temperature_K" class="w3-large w3-italic">Air temperature [K]</label>
+                    <div style="width: 60%; margin-left: auto;" class="w3-right">
+                        <input class="w3-input w3-light-grey w3-hover-blue" type="number" id="Air_temperature_K" name="Air_temperature_K">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="Process_temperature_K" class="w3-large w3-italic">Process temperature [K]</label>
+                    <div style="width: 60%; margin-left: auto;" class="w3-right">
+                        <input class="w3-input w3-light-grey w3-hover-blue" type="number" id="Process_temperature_K" name="Process_temperature_K">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="Rotational_speed_rpm" class="w3-large w3-italic">Rotational speed [rpm]</label>
+                    <div style="width: 60%; margin-left: auto;" class="w3-right">
+                        <input class="w3-input w3-light-grey w3-hover-blue" type="number" id="Rotational_speed_rpm" name="Rotational_speed_rpm">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="Torque_Nm" class="w3-large w3-italic">Torque [Nm]</label>
+                    <div style="width: 60%; margin-left: auto;" class="w3-right">
+                        <input class="w3-input w3-light-grey w3-hover-blue" type="number" id="Torque_Nm" name="Torque_Nm">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="Tool_wear_min" class="w3-large w3-italic">Tool wear [min]</label>
+                    <div style="width: 60%; margin-left: auto;" class="w3-right">
+                        <input class="w3-input w3-light-grey w3-hover-blue" type="number" id="Tool_wear_min" name="Tool_wear_min">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="Power" class="w3-large w3-italic">Power</label>
+                    <div style="width: 60%; margin-left: auto;" class="w3-right">
+                        <input class="w3-input w3-light-grey w3-hover-blue" type="number" id="Power" name="Power">
+                    </div>
+                </div>
+            <button style="width: 60%;" class="w3-center w3-button w3-blue w3-margin-top w3-margin-bottom w3-round" type="submit">Submit</button>
+            </form>
+
+            {% if prediction%}
+                <p class="w3-large w3-center w3-margin-top" style="margin-top: 20px; margin-bottom: 20px;">Résultat : {{ prediction }}</p>
+            {% endif %}
+            <br>
+        </div>
+        <br>
+    </div>    
+    
+
+<footer class="w3-center">all right reserved @ 2024 | HIROUCHE Walid / BENRGUIG Ayyoub</footer>
+    
+</body>
+</html>
