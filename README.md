@@ -4,6 +4,10 @@
 ## Project Overview
 In the industrial sector, preventive maintenance is essential for maximizing operational efficiency and minimizing costly downtime. This project addresses the implementation of artificial intelligence for predictive maintenance, focusing on milling machines. The primary objective is to develop a predictive model capable of forecasting milling machine failures, thereby reducing downtime and maintenance costs. Additionally, the model assesses failure probability under varying processing conditions and equipment quality levels, helping enhance machine reliability and operation profitability.
 
+<p align="center">
+  <img src="machine_fraisage.jpg" alt="Milling machine" width="50%"/>
+</p>
+
 ## Dataset
 The dataset used for this project contains 10,000 entries and 14 features. Key attributes include:
 - Product ID and quality (low, medium, high),
